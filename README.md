@@ -6,6 +6,34 @@
 Sentiment analysis is the process of analyzing digital text to determine if the emotional tone of the message is positive, negative, or neutral. This model focuses on restaurant reviews and classify it into two categories satisfactory or unsatisfactory.
 
 
+# Working 
+
+# 1. Model Training phase
+
+1. Importing the dataset
+Using pandas the restaurant reviews dataset is imported and stored in dataset variable
+
+2. Text cleaning
+The text is cleaned by first dividing it into [tokens](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html) then removing the [stopwords](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/) and perform [stemming](https://www.geeksforgeeks.org/introduction-to-stemming/) and [lemmatization](https://www.geeksforgeeks.org/python-lemmatization-with-nltk/)
+
+3. [Tfidf Vectorization](https://www.geeksforgeeks.org/understanding-tf-idf-term-frequency-inverse-document-frequency/)
+Using the tfidf vectorizer create a matrix representation of the given textual data which will be an essential part of model creation.
+
+4. Training the model
+Use the train_test_split from scikit-learn library to split data into training and testing datasets.
+Train the classification model using RandomForestClassifier.
+
+# 2. Model Testing phase
+1. Calculating the evalutaion metrics
+Calculate the confusion matrix and accuracy score.
+
+2. Make Prediction
+Provide a sample review for prediction and check prediction accuracy.
+
+# 3. Saving the model
+
+Use the joblib libraryto save the weights of classification model and also save the weights of tfidf vectorizer
+
 # Getting Started
 
 # Dependencies
